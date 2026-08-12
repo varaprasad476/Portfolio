@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adabala Poorna Naga Surya Vara Prasad | Backend & AI Engineer</title>
+    <meta name="description" content="Portfolio of Adabala Poorna Naga Surya Vara Prasad - Final Year B.Tech ICT Student at SASTRA University. Backend Developer, AI Enthusiast, and State Cricket Player.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+
+    <!-- Ambient Background Glow Orbs -->
+    <div class="ambient-glow orb-1"></div>
+    <div class="ambient-glow orb-2"></div>
+    <div class="ambient-glow orb-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-accent">&lt;</span>VaraPrasad<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> About</a>
+                <a href="#skills" class="nav-link"><i class="fa-solid fa-code"></i> Skills</a>
+                <a href="#projects" class="nav-link"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+                <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+                <a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+                <button class="hamburger" id="hamburgerMenu" aria-label="Toggle Navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Wrapper -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="badge-status">
+                        <span class="status-dot"></span> Available for Backend & AI Roles (2027 Batch)
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="gradient-text">Adabala Vara Prasad</span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        Backend Developer &amp; AI Systems Engineer
+                    </h2>
+                    <p class="hero-description">
+                        Final-year ICT student at <strong>SASTRA Deemed University</strong>. Specializing in high-performance Java Spring Boot REST microservices, Explainable AI models, and scalable database systems.
+                    </p>
+                    
+                    <div class="hero-highlights">
+                        <div class="stat-card">
+                            <span class="stat-number">7.897</span>
+                            <span class="stat-label">SASTRA CGPA</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">98.5%</span>
+                            <span class="stat-label">Inter Board Score</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">ACA U-14</span>
+                            <span class="stat-label">State Cricket Player</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary"><i class="fa-solid fa-rocket"></i> Explore Projects</a>
+                        <a href="#contact" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Contact Me</a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span>Connect:</span>
+                        <a href="https://linkedin.com/in/vara-prasad-adabala7a591937" target="_blank" class="social-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/varaprasad476" target="_blank" class="social-link" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:varaprasad.adabala47@gmail.com" class="social-link" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+917893065966" class="social-link" title="Phone"><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="window-controls">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="code-title">DeveloperProfile.java</span>
+                        </div>
+                        <pre class="code-body"><code><span class="keyword">public class</span> <span class="class-name">Developer</span> {
+    <span class="keyword">private String</span> name = <span class="string">"Adabala Vara Prasad"</span>;
+    <span class="keyword">private String</span> degree = <span class="string">"B.Tech ICT @ SASTRA"</span>;
+    <span class="keyword">private String[]</span> stack = {
+        <span class="string">"Java Spring Boot"</span>,
+        <span class="string">"Python / Scikit-learn"</span>,
+        <span class="string">"MySQL & MongoDB"</span>,
+        <span class="string">"REST APIs & JWT"</span>
+    };
+
+    <span class="annotation">@Goal</span>
+    <span class="keyword">public void</span> <span class="method">buildFuture</span>() {
+        System.out.println(<span class="string">"Building scalable & AI-powered systems."</span>);
+    }
+}</code></pre>
+                        <div class="code-footer">
+                            <span class="tag"><i class="fa-solid fa-circle-check"></i> Clean Architecture</span>
+                            <span class="tag"><i class="fa-solid fa-shield-halved"></i> JWT Secured</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">About Me</span>
+                    <h2 class="section-title">Passion for Backend Systems &amp; AI Intelligence</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card glass">
+                        <div class="icon-box"><i class="fa-solid fa-server"></i></div>
+                        <h3>Backend Architecture</h3>
+                        <p>Designing RESTful APIs with Spring Boot, Spring Security, JWT authentication, BCrypt encryption, and Hibernate JPA ORM with strict entity relationships.</p>
+                    </div>
+
+                    <div class="about-card glass">
+                        <div class="icon-box"><i class="fa-solid fa-brain"></i></div>
+                        <h3>Explainable AI / ML</h3>
+                        <p>Engineered end-to-end Machine Learning pipelines with Scikit-learn, Random Forest, SMOTE class balancing, and interpretability frameworks SHAP &amp; LIME.</p>
+                    </div>
+
+                    <div class="about-card glass">
+                        <div class="icon-box"><i class="fa-solid fa-database"></i></div>
+                        <h3>Relational &amp; NoSQL Data</h3>
+                        <p>Solid grasp of DBMS fundamentals, SQL queries, entity mapping, transaction management in MySQL, and document storage with MongoDB.</p>
+                    </div>
+
+                    <div class="about-card glass">
+                        <div class="icon-box"><i class="fa-solid fa-medal"></i></div>
+                        <h3>Leadership &amp; Sports</h3>
+                        <p>State-level cricketer representing East Godavari District ACA U-14 &amp; SASTRA University. Proven track record in tournament organization and execution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Technical Expertise</span>
+                    <h2 class="section-title">Languages, Frameworks &amp; Tools</h2>
+                </div>
+
+                <div class="skills-filter">
+                    <button class="filter-btn active" data-filter="all">All Skills</button>
+                    <button class="filter-btn" data-filter="backend">Backend &amp; DB</button>
+                    <button class="filter-btn" data-filter="ai">AI / ML &amp; APIs</button>
+                    <button class="filter-btn" data-filter="core">Core CS &amp; Tools</button>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Languages -->
+                    <div class="skill-category glass" data-cat="backend">
+                        <h3><i class="fa-solid fa-code"></i> Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+                            <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+                            <span class="skill-pill"><i class="fa-solid fa-database"></i> SQL</span>
+                            <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="skill-pill"><i class="fa-solid fa-c"></i> C++</span>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Databases -->
+                    <div class="skill-category glass" data-cat="backend">
+                        <h3><i class="fa-solid fa-gears"></i> Backend &amp; Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill"><i class="fa-solid fa-leaf"></i> Spring Boot</span>
+                            <span class="skill-pill"><i class="fa-solid fa-lock"></i> Spring Security</span>
+                            <span class="skill-pill"><i class="fa-solid fa-key"></i> JWT &amp; BCrypt</span>
+                            <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> REST APIs</span>
+                            <span class="skill-pill"><i class="fa-solid fa-database"></i> MySQL</span>
+                            <span class="skill-pill"><i class="fa-solid fa-envira"></i> MongoDB</span>
+                            <span class="skill-pill"><i class="fa-solid fa-cube"></i> Hibernate / JPA</span>
+                        </div>
+                    </div>
+
+                    <!-- AI & Frameworks -->
+                    <div class="skill-category glass" data-cat="ai">
+                        <h3><i class="fa-solid fa-robot"></i> AI &amp; Machine Learning</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill"><i class="fa-solid fa-chart-line"></i> Scikit-learn</span>
+                            <span class="skill-pill"><i class="fa-solid fa-tree"></i> Random Forest</span>
+                            <span class="skill-pill"><i class="fa-solid fa-lightbulb"></i> SHAP &amp; LIME</span>
+                            <span class="skill-pill"><i class="fa-solid fa-sliders"></i> SMOTE &amp; GridSearchCV</span>
+                            <span class="skill-pill"><i class="fa-solid fa-flask"></i> Flask API</span>
+                            <span class="skill-pill"><i class="fa-solid fa-microchip"></i> Gemini API</span>
+                        </div>
+                    </div>
+
+                    <!-- Core CS & Tools -->
+                    <div class="skill-category glass" data-cat="core">
+                        <h3><i class="fa-solid fa-wrench"></i> Core CS &amp; Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-pill"><i class="fa-solid fa-sitemap"></i> Data Structures &amp; Algorithms</span>
+                            <span class="skill-pill"><i class="fa-solid fa-object-group"></i> OOP</span>
+                            <span class="skill-pill"><i class="fa-solid fa-database"></i> DBMS</span>
+                            <span class="skill-pill"><i class="fa-solid fa-desktop"></i> Operating Systems</span>
+                            <span class="skill-pill"><i class="fa-solid fa-network-wired"></i> Computer Networks</span>
+                            <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git &amp; GitHub</span>
+                            <span class="skill-pill"><i class="fa-solid fa-paper-plane"></i> Postman</span>
+                            <span class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Featured Work</span>
+                    <h2 class="section-title">Backend Architecture &amp; Machine Learning</h2>
+                </div>
+
+                <div class="projects-list">
+                    <!-- Project 1: CricVerse -->
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <div class="project-tag">Full-Stack Backend System</div>
+                            <h3 class="project-title">CricVerse -- Live Scoring Platform</h3>
+                            <p class="project-desc">
+                                A high-performance Spring Boot backend powering a live cricket scoring system. Features multi-role authentication, team and player management, and match state persistence.
+                            </p>
+                            <div class="project-features">
+                                <div><i class="fa-solid fa-shield-halved"></i> <strong>Spring Security + JWT + BCrypt</strong> password encryption for endpoint protection.</div>
+                                <div><i class="fa-solid fa-database"></i> <strong>Spring Data JPA &amp; Hibernate</strong> with <code>@OneToMany</code> and <code>@ManyToOne</code> relational mappings.</div>
+                                <div><i class="fa-solid fa-file-code"></i> <strong>Swagger UI</strong> integration &amp; global exception handling architecture.</div>
+                            </div>
+                            <div class="tech-stack">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>Spring Security</span>
+                                <span>JWT</span>
+                                <span>Hibernate</span>
+                                <span>MySQL</span>
+                                <span>Swagger UI</span>
+                            </div>
+                        </div>
+
+                        <!-- Live Interactive Playground for CricVerse -->
+                        <div class="project-interactive">
+                            <div class="interactive-box">
+                                <h4><i class="fa-solid fa-terminal"></i> Interactive REST API Simulator</h4>
+                                <div class="api-demo">
+                                    <div class="api-controls">
+                                        <select id="apiEndpointSelect" class="api-select">
+                                            <option value="auth">POST /api/auth/login</option>
+                                            <option value="createMatch">POST /api/matches/create</option>
+                                            <option value="updateScore">PUT /api/matches/score</option>
+                                            <option value="getLeaderboard">GET /api/players/stats</option>
+                                        </select>
+                                        <button id="runApiBtn" class="btn btn-primary btn-sm"><i class="fa-solid fa-play"></i> Send Request</button>
+                                    </div>
+                                    <div class="api-response-window">
+                                        <div class="status-bar">STATUS: <span id="apiStatus" class="status-200">200 OK</span></div>
+                                        <pre id="apiOutput" class="api-code-output"><code>// Click "Send Request" to test simulated API response...</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Stroke Risk Prediction -->
+                    <div class="project-card glass">
+                        <div class="project-info">
+                            <div class="project-tag">Machine Learning &amp; Explainable AI</div>
+                            <h3 class="project-title">Stroke Risk Prediction with Explainable AI</h3>
+                            <p class="project-desc">
+                                End-to-end Machine Learning pipeline for stroke risk assessment integrated with SHAP and LIME to deliver clinical feature importance and transparent predictions.
+                            </p>
+                            <div class="project-features">
+                                <div><i class="fa-solid fa-chart-simple"></i> <strong>81% Accuracy, 52% Recall, 20% F1-Score, 0.67 ROC-AUC</strong> on imbalanced clinical data.</div>
+                                <div><i class="fa-solid fa-sliders"></i> <strong>SMOTE</strong> class balancing &amp; <strong>GridSearchCV</strong> hyperparameter tuning.</div>
+                                <div><i class="fa-solid fa-globe"></i> <strong>Flask Web Application</strong> for instant risk calculation with visual explanation graphs.</div>
+                            </div>
+                            <div class="tech-stack">
+                                <span>Python</span>
+                                <span>Scikit-learn</span>
+                                <span>Random Forest</span>
+                                <span>SHAP</span>
+                                <span>LIME</span>
+                                <span>SMOTE</span>
+                                <span>Flask</span>
+                            </div>
+                        </div>
+
+                        <!-- Live Interactive Playground for ML Model -->
+                        <div class="project-interactive">
+                            <div class="interactive-box">
+                                <h4><i class="fa-solid fa-calculator"></i> Interactive Stroke Risk Predictor</h4>
+                                <div class="ml-simulator">
+                                    <div class="sim-group">
+                                        <label for="simAge">Age: <span id="valAge">55</span></label>
+                                        <input type="range" id="simAge" min="18" max="90" value="55">
+                                    </div>
+                                    <div class="sim-group">
+                                        <label for="simGlucose">Avg Glucose Level (mg/dL): <span id="valGlucose">140</span></label>
+                                        <input type="range" id="simGlucose" min="70" max="280" value="140">
+                                    </div>
+                                    <div class="sim-row">
+                                        <label><input type="checkbox" id="simHypertension"> Hypertension</label>
+                                        <label><input type="checkbox" id="simHeart"> Heart Disease</label>
+                                    </div>
+                                    
+                                    <div class="sim-result">
+                                        <div class="risk-meter">
+                                            <span>Calculated Risk:</span>
+                                            <div class="risk-bar-container">
+                                                <div id="riskBar" class="risk-bar" style="width: 35%;"></div>
+                                            </div>
+                                            <span id="riskPercentage" class="risk-val">35% (Moderate)</span>
+                                        </div>
+                                        <div id="shapExplanation" class="shap-box">
+                                            <small><i class="fa-solid fa-lightbulb"></i> <strong>SHAP Top Factors:</strong> High Glucose (+18%), Age (+12%)</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Academic Background</span>
+                    <h2 class="section-title">Education &amp; Credentials</h2>
+                </div>
+
+                <div class="education-timeline">
+                    <div class="timeline-item glass">
+                        <div class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2023 -- 2027</span>
+                            <h3>SASTRA Deemed University</h3>
+                            <h4>B.Tech in Information and Communication Technology</h4>
+                            <div class="score-badge">CGPA: <strong>7.897</strong> / 10.0</div>
+                            <p>Focusing on Data Structures &amp; Algorithms, Database Systems, Software Engineering, and AI Applications. Active inter-university athlete.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item glass">
+                        <div class="timeline-badge"><i class="fa-solid fa-school"></i></div>
+                        <div class="timeline-content">
+                            <span class="timeline-date">2021 -- 2023</span>
+                            <h3>Tirumala Junior College</h3>
+                            <h4>Board of Intermediate Education</h4>
+                            <div class="score-badge highlight">Score: <strong>98.5%</strong></div>
+                            <p>Rajahmundry, India. Achieved exceptional academic distinction in MPC stream.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Honors &amp; Sports</span>
+                    <h2 class="section-title">Achievements &amp; Leadership</h2>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card glass">
+                        <div class="achieve-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>State Cricket Representation</h3>
+                        <p>Represented <strong>East Godavari District</strong> in the <strong>Andhra Cricket Association Under-14 team</strong> and SASTRA Deemed University in inter-university competitions.</p>
+                    </div>
+
+                    <div class="achievement-card glass">
+                        <div class="achieve-icon"><i class="fa-solid fa-medal"></i></div>
+                        <h3>CM Trophy Champion</h3>
+                        <p><strong>Champion and Runner-up</strong> in the Tamil Nadu Chief Minister's Trophy Cricket Tournament.</p>
+                    </div>
+
+                    <div class="achievement-card glass">
+                        <div class="achieve-icon"><i class="fa-solid fa-award"></i></div>
+                        <h3>Colosseum Winner</h3>
+                        <p>Winner of the <strong>SASTRA Colosseum</strong> &amp; <strong>SASTRA SRC Campus Colosseum</strong> Cricket Tournaments.</p>
+                    </div>
+
+                    <div class="achievement-card glass">
+                        <div class="achieve-icon"><i class="fa-solid fa-people-organizing"></i></div>
+                        <h3>Tournament Coordinator</h3>
+                        <p>Organized and coordinated major on-campus and off-campus cricket tournaments, demonstrating team leadership and management skills.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section alt-bg">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2 class="section-title">Let's Build Something Great Together</h2>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card glass">
+                        <h3>Contact Information</h3>
+                        <p>Feel free to reach out for backend developer positions, AI/ML projects, or tech collaborations!</p>
+
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <label>Email</label>
+                                    <a href="mailto:varaprasad.adabala47@gmail.com" class="copy-trigger" data-copy="varaprasad.adabala47@gmail.com">varaprasad.adabala47@gmail.com <i class="fa-regular fa-copy"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <label>Phone</label>
+                                    <a href="tel:+917893065966" class="copy-trigger" data-copy="+917893065966">+91 7893065966 <i class="fa-regular fa-copy"></i></a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <div>
+                                    <label>LinkedIn</label>
+                                    <a href="https://linkedin.com/in/vara-prasad-adabala7a591937" target="_blank">linkedin.com/in/vara-prasad-adabala7a591937</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon"><i class="fa-brands fa-github"></i></div>
+                                <div>
+                                    <label>GitHub</label>
+                                    <a href="https://github.com/varaprasad476" target="_blank">github.com/varaprasad476</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-card glass">
+                        <form id="contactForm" onsubmit="event.preventDefault(); showToast('Message sent successfully! (Demo mode)');">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="Hi Vara Prasad, I'd like to discuss a role..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Adabala Poorna Naga Surya Vara Prasad. All Rights Reserved.</p>
+            <p class="subtext">Designed &amp; Engineered with Passion.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
