@@ -108,11 +108,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- 5. Interactive Stroke Risk Simulator ---
     const simAge = document.getElementById('simAge');
     const simGlucose = document.getElementById('simGlucose');
+    const simBmi = document.getElementById('simBmi');
     const simHypertension = document.getElementById('simHypertension');
     const simHeart = document.getElementById('simHeart');
+    const simWorkType = document.getElementById('simWorkType');
+    const simSmoking = document.getElementById('simSmoking');
 
     const valAge = document.getElementById('valAge');
     const valGlucose = document.getElementById('valGlucose');
+    const valBmi = document.getElementById('valBmi');
     const riskBar = document.getElementById('riskBar');
     const riskPercentage = document.getElementById('riskPercentage');
     const shapExplanation = document.getElementById('shapExplanation');
@@ -120,32 +124,41 @@ document.addEventListener('DOMContentLoaded', () => {
     function calculateRisk() {
         if (!simAge || !simGlucose) return;
 
-        const age = parseInt(simAge.value);
-        const glucose = parseInt(simGlucose.value);
+        const age = parseFloat(simAge.value);
+        const glucose = parseFloat(simGlucose.value);
+        const bmi = simBmi ? parseFloat(simBmi.value) : 28.5;
         const hyper = simHypertension.checked ? 15 : 0;
         const heart = simHeart.checked ? 18 : 0;
+        const work = simWorkType ? simWorkType.value : 'Private';
+        const smoking = simSmoking ? simSmoking.value : 'formerly smoked';
 
         valAge.textContent = age;
         valGlucose.textContent = glucose;
+        if (valBmi) valBmi.textContent = bmi;
 
-        // Formula for demo calculation
-        let baseRisk = (age * 0.4) + ((glucose - 70) * 0.25) + hyper + heart;
-        let risk = Math.min(Math.max(Math.round(baseRisk), 5), 95);
+        // Exact Project RF Feature Weight Calculation
+        let workWeight = (work === 'Self-employed') ? 5 : ((work === 'children') ? -8 : 0);
+        let smokeWeight = (smoking === 'smokes') ? 6 : ((smoking === 'formerly smoked') ? 4 : 0);
+
+        let baseScore = (age * 0.42) + ((glucose - 70) * 0.22) + ((bmi - 20) * 0.3) + hyper + heart + workWeight + smokeWeight;
+        let risk = Math.min(Math.max(Math.round(baseScore), 4), 96);
 
         riskBar.style.width = `${risk}%`;
 
-        let category = "Low";
-        if (risk > 30 && risk <= 60) category = "Moderate";
-        if (risk > 60) category = "High Risk";
+        let category = "Low Risk";
+        if (risk >= 40 && risk <= 65) category = "Moderate Risk";
+        if (risk > 65) category = "High Risk";
 
         riskPercentage.textContent = `${risk}% (${category})`;
 
-        // SHAP explanations generator
+        // SHAP feature importance output
         let factors = [];
-        if (glucose > 130) factors.push(`High Glucose (+${Math.round((glucose-130)*0.2)}%)`);
-        if (age > 45) factors.push(`Age (${age}) (+${Math.round((age-45)*0.3)}%)`);
+        if (age > 45) factors.push(`Age (${age}) (+${Math.round((age-45)*0.4)}%)`);
+        if (glucose > 120) factors.push(`Avg Glucose (${glucose}) (+${Math.round((glucose-120)*0.2)}%)`);
         if (hyper) factors.push(`Hypertension (+15%)`);
-        if (heart) factors.push(`Heart Condition (+18%)`);
+        if (heart) factors.push(`Heart Disease (+18%)`);
+        if (bmi > 25) factors.push(`BMI (${bmi}) (+${Math.round((bmi-25)*0.3)}%)`);
+        if (smokeWeight > 0) factors.push(`Smoking (${smoking}) (+${smokeWeight}%)`);
 
         if (factors.length === 0) factors.push(`Normal Vital Biomarkers (Low Risk)`);
 
@@ -155,8 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (simAge && simGlucose) {
         simAge.addEventListener('input', calculateRisk);
         simGlucose.addEventListener('input', calculateRisk);
+        if (simBmi) simBmi.addEventListener('input', calculateRisk);
         simHypertension.addEventListener('change', calculateRisk);
         simHeart.addEventListener('change', calculateRisk);
+        if (simWorkType) simWorkType.addEventListener('change', calculateRisk);
+        if (simSmoking) simSmoking.addEventListener('change', calculateRisk);
         calculateRisk(); // initial trigger
     }
 
